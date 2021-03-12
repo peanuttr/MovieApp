@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color='primary'>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <h3>Harry Potter</h3>
+    <button *ngFor="let item of result[0]" class="button" [routerLink]="['/','movies',item.imdbID]">
+      <ion-thumbnails>
+        <img [src]="item.Poster">
+      </ion-thumbnails>
+      <ion-item>
+        <ion-label>
+          {{item.Title}}
+        </ion-label>
+      </ion-item>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <h3>BATMAN</h3>
+    <button *ngFor="let item of result[1]" class="button" [routerLink]="['/','movies',item.imdbID]">
+      <ion-thumbnails>
+        <img [src]="item.Poster">
+      </ion-thumbnails>
+      <ion-item>
+        <ion-label>
+          {{item.Title}}
+        </ion-label>
+      </ion-item>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <h3>Sherlock Holmes</h3>
+    <button *ngFor="let item of result[2]" class="button" [routerLink]="['/','movies',item.imdbID]">
+      <ion-thumbnails>
+        <img [src]="item.Poster">
+      </ion-thumbnails>
+      <ion-item>
+        <ion-label>
+          {{item.Title}}
+        </ion-label>
+      </ion-item>
+    </button>
+  </ion-list>
+</ion-content>
